@@ -2,6 +2,13 @@
 
 Webapp for vortan spellchecker.
 
+## Install
+
+```
+cd frontend
+npm install
+```
+
 ## Run
 
 Frontent
