@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
@@ -13,14 +12,6 @@ export const ParamsContext = React.createContext({ lang: "hy"})
 export default function Params() {
     const [lang, setLang] = React.useState("hy");
     const [mode, setMode] = React.useState("tokenize");
-
-    const handleRadioLang = (event) => {
-        setLang(event.target.value);
-    }
-
-    const handleRadioMode = (event) => {
-        setMode(event.target.value);
-    }
 
     const handleChangeLang = (val) => setLang(val);
     const handleChangeMode = (val) => setMode(val);

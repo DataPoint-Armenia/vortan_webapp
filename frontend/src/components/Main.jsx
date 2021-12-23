@@ -1,5 +1,4 @@
 import React from "react";
-import InputForm from "./InputForm"
 import Params from "./Params"
 import Header from "./Header";
 import Alert from 'react-bootstrap/Alert';
