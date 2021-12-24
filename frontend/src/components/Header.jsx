@@ -1,12 +1,11 @@
 import React from "react";
 import Navbar from 'react-bootstrap/Navbar';
 
+import "./sass/style.scss"
+
 const Header = () => {
-    const style = {
-      "marginBottom": "1em",
-    };
     return (
-        <div style={style}>
+        <div className="component">
             <Navbar bg="light">
                 <Navbar.Brand>Vortan Spellcheck Demo</Navbar.Brand>
             </Navbar>

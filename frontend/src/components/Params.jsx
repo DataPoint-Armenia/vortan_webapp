@@ -7,6 +7,8 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 
 import InputForm from "./InputForm"
 
+import './sass/style.scss'
+
 export const ParamsContext = React.createContext({ lang: "hy"})
 
 export default function Params() {
@@ -16,14 +18,11 @@ export default function Params() {
     const handleChangeLang = (val) => setLang(val);
     const handleChangeMode = (val) => setMode(val);
 
-    const style = {
-        marginBottom: "2em",
-    };
     return (
         <>
-            <div style={style}>
-                <Form.Label> <b> Params </b> </Form.Label>
-                <Container>
+            <div className="params">
+              <Form.Label> <b> Params </b> </Form.Label>
+              <Container>
                 <Row>
                 <ToggleButtonGroup type="radio" value={lang} onChange={handleChangeLang}  name="optionsLang">
                   <ToggleButton id="tbg-btn-1" value={"hy"} variant="outline-secondary">
@@ -46,7 +45,7 @@ export default function Params() {
                 </ToggleButtonGroup>
                 <br />
                 </Row>
-                </Container>
+              </Container>
             </div>
             <ParamsContext.Provider value={{lang, mode}}>
                 <InputForm />

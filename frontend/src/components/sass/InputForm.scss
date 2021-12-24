@@ -1,0 +1,22 @@
+@import './style.scss';
+
+.input-form {
+
+    .container {
+        margin: unset;
+    }
+
+    .input-group {
+
+        @include input-output;
+
+        .form-control {
+            margin: 2px;
+            height: 20vh;
+        }
+        .btn {
+            margin: 2px;
+        }
+        
+    }
+}
