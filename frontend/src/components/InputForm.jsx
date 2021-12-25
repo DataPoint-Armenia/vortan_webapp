@@ -1,16 +1,15 @@
 import React from "react";
 import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
-import Table from 'react-bootstrap/Table';
 import Alert from 'react-bootstrap/Alert';
 import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 import Results from "./Results"
 import { ParamsContext } from "./Params";
+
+import './sass/InputForm.scss'
 
 export const ResultsContext = React.createContext({ results: []})
 
@@ -51,28 +50,24 @@ const InputForm = () => {
         });
     }
 
-    const style = {
-        marginBottom: "1em",
-    };
+    const {Control, Group, Label} = Form;
 
     return (
         <div>
-            <div style={style}>
+            <div className="input-form">
             <Form onSubmit={handleSubmit}>
                 <Container>
                 <Row>
-                    <Form.Label> <b> Input Term </b>  </Form.Label>
+                    <Label> <b> Input Term </b>  </Label>
                 </Row>
                 <Row>
-                    <Form.Group>
+                    <Group>
                         <InputGroup>
-                        <Form.Control type="text" placeholder="տպրոց"
+                        <Control type="text" placeholder="տպրոց" as="textarea" 
                             onChange={handleInput.bind(this)} />
-                        <InputGroup.Append>
                             <Button type="submit" variant="primary">Submit</Button>
-                        </InputGroup.Append>
                         </InputGroup>
-                    </Form.Group>
+                    </Group>
                 </Row> 
                 <Row>
                     <Alert variant={alertVariant}>

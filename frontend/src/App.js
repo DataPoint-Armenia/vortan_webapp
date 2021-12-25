@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import {Helmet} from "react-helmet";
 
 import Main from "./components/Main";
